@@ -30,7 +30,7 @@ export const useSocket = () => {
 
   const prevRollRef = useRef<number | null>(null);
   const prevVersionRef = useRef<number>(0);
-  const pollingTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const pollingTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const gameStateRef = useRef<GameState | null>(null);
   gameStateRef.current = gameState;
 
