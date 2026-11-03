@@ -163,7 +163,7 @@ export const DiceThreeJS: React.FC<DiceThreeJSProps> = ({
 
   const [hasWebGL, setHasWebGL] = useState(true);
   const [isRolling, setIsRolling] = useState(false);
-  const rollSafetyTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const rollSafetyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // References for Three.js scene
   const sceneRef = useRef<THREE.Scene | null>(null);
